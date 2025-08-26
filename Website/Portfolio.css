@@ -1,0 +1,129 @@
+/* Me */
+.Summary {
+  margin-top: 0;
+  line-height: 1.5;
+  margin-left: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* Me h4 */
+.Summary h4{
+  border: 2px solid;
+  width: 55px;
+  text-align: center;
+  background-color: rgb(255, 187, 0);
+  font-family: Georgia;
+}
+
+/* Profile Picture */
+.profile-pic {
+  float: left;
+  width: 300px;
+  height: auto;
+  margin: 0 20px 20px 0;
+  display: block;
+}
+
+/* My Portfolio */
+h1 { 
+    text-align: center;
+    border: 10px double rgb(5, 103, 222);
+    border-radius: 20px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    background-color: rgb(255, 187, 0);
+    font-family: Georgia;
+}
+
+/* Body */
+body {
+    background-color: rgba(246, 193, 19, 0.486);
+    margin: 7px;
+}
+
+/* Skills */
+.Skills p {
+    position: fixed;
+}
+
+/* About me */
+.About-me {
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* About me p */
+.About-me {
+    font-family: sans-serif;
+    margin: 0 0 1px 0;
+    line-height: 1.6;
+}
+
+/* About me header2 */
+.About-me h2{
+    border: 2px solid;
+    width: 135px;
+    text-align: center;
+    background-color: rgb(255, 187, 0);
+    font-family: Georgia;
+    margin-bottom: 12px;
+}
+
+/* Skills h4 */
+.Skills h4{
+    border: 2px solid;
+    width: 55px;
+    text-align: center;
+    background-color: rgb(255, 187, 0);
+    font-family: Georgia;
+}
+
+/* Skills list */
+.Skills ul{
+    font-family: sans-serif;
+}
+
+/* Hobbies h4 */
+.Hobbies h4 {
+    border: 2px solid;
+    width: 75px;
+    text-align: center;
+    background-color: rgb(255, 187, 0);
+    font-family: Georgia;
+}
+
+/* Hobbies list */
+.Hobbies ul {
+    font-family: sans-serif;
+}
+
+/* Tools h4 */
+.Tools h4 {
+    border: 2px solid;
+    width: 55px;
+    text-align: center;
+    background-color: rgb(255, 187, 0);
+    font-family: Georgia;
+}
+
+/* Tools list */
+.Tools ul {
+    font-family: sans-serif;
+}
+
+/* Contact h4 */
+.Contact h4 {
+    border: 2px solid;
+    width: 100px;
+    text-align: center;
+    background-color: rgb(255, 187, 0);
+    font-family: Georgia;
+}
+
+/* Contact paragraph */
+.Contact p {
+    font-family: sans-serif;
+}
