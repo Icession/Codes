@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+}
+
+/* Banner img */
+.top-banner {
+  position: relative;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(121, 121, 205, 0.7), rgba(0,0,128,0.7)), url("Careerimg.jpg")
+  no-repeat center center/cover;
+}
+
+/* Semi-opaque overlay box inside the top banner for readable text */
+.top-banner .overlay {
+  text-align: center;
+  color: white;
+  background: rgba(0, 47, 108, 0.6);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+/* Heading inside the top banner */
+.top-banner h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* Paragraph inside the top banner */
+.top-banner p {
+  font-size: 14px;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header img {
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 8px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Logo image sizing and appearance inside the brand area */
+.brand img {
+  height: 56px;
+  width: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0;
+}
+
+.site-title h1 {
+  font-size: 22px;
+  margin: 0;
+  color: #111;
+}
+.site-title p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.navbar {
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Individual nav link — styled like a button */
+.navbar a {
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 15px;
+  color: #000;
+  border: 2px solid #0014f4;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+/* Pseudo-element used to create the sliding hover fill for links */
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #0f0fb0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+/* Hover state for the sliding background pseudo-element */
+.navbar a:hover::before {
+  left: 0;
+}
+
+/* Hover state for the nav link text (contrasts with the fill) */
+.navbar a:hover {
+  color: #fff;
+}
+
+/* Large main section with big background image and overlay */
+.main {
+  background: linear-gradient(rgba(102, 102, 222, 0.7), rgba(0,0,128,0.7)), url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Main heading size and spacing */
+.main h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Main paragraph sizing and readable line settings */
+.main p {
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* Container for the row of feature/icon columns below the hero */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 55px;
+}
+
+/* Individual feature column (icon + caption) */
+.feature {
+  max-width: 200px;
+  text-align: center;
+}
+
+/* Icon image sizing for the three feature icons */
+.icon1 img,
+.icon2 img,
+.icon3 img {
+    width: 60px;
+    height: 60px;
+}
