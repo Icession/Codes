@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* fix: scope homepage body rule to body.index (body with class="index") */
+
 body.index {
   background-color: #25252b;
 }
@@ -16,7 +16,7 @@ body.index {
   no-repeat center center/cover; 
 }
 
-/* Overlay box inside the top banner for readable text */
+
 .top-banner .overlay {
   text-align: center;
   color: white;
@@ -85,7 +85,7 @@ header img {
   align-items: center;
 }
 
-/* Individual nav link — styled like a button */
+
 .navbar a {
   text-decoration: none;
   padding: 12px 24px;
@@ -99,7 +99,7 @@ header img {
   z-index: 1;
 }
 
-/* Used to create the sliding hover fill for links */
+
 .navbar a::before {
   content: "";
   position: absolute;
@@ -112,7 +112,7 @@ header img {
   z-index: -1;
 }
 
-/* Hover state for the sliding background */
+
 .navbar a:hover::before {
   left: 0;
 }
@@ -121,7 +121,7 @@ header img {
   color: #fff;
 }
 
-/* Large main section with big background image and overlay */
+
 .main {
   background: linear-gradient(rgba(52, 134, 215, 0.7), rgb(14, 43, 87)), url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d") no-repeat center center/cover;
   color: white;
@@ -129,7 +129,7 @@ header img {
   padding: 80px 20px;
 }
 
-/* Main heading size and spacing */
+
 .main h1 {
   font-size: 32px;
   margin-bottom: 20px;
@@ -480,7 +480,7 @@ body.body-auth {
   transform: translateY(0);
 }
 
-/* small Home button used on auth pages */
+
 .home-wrap {
   margin-top: 12px;
   text-align: center;
