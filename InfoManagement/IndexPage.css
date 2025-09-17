@@ -1,12 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-  background: #f4f4f4;
+/* fix: scope homepage body rule to body.index (body with class="index") */
+body.index {
+  background-color: #25252b;
 }
 
 /* Banner img */
@@ -16,11 +12,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(121, 121, 205, 0.7), rgba(0,0,128,0.7)), url("Careerimg.jpg")
-  no-repeat center center/cover;
+  background: linear-gradient(rgba(52, 134, 215, 0.7), rgb(14, 43, 87)), url("Careerimg.jpg")
+  no-repeat center center/cover; 
 }
 
-/* Semi-opaque overlay box inside the top banner for readable text */
+/* Overlay box inside the top banner for readable text */
 .top-banner .overlay {
   text-align: center;
   color: white;
@@ -46,7 +42,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background: white;
+  background: #ffffff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -74,12 +70,12 @@ header img {
 .site-title h1 {
   font-size: 22px;
   margin: 0;
-  color: #111;
+  color: rgb(0, 0, 0);
 }
 .site-title p {
   margin: 2px 0 0;
   font-size: 13px;
-  color: #666;
+  color: rgb(0, 0, 0);
 }
 
 .navbar {
@@ -94,8 +90,8 @@ header img {
   text-decoration: none;
   padding: 12px 24px;
   font-size: 15px;
-  color: #000;
-  border: 2px solid #0014f4;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 12px;
   position: relative;
   overflow: hidden;
@@ -103,7 +99,7 @@ header img {
   z-index: 1;
 }
 
-/* Pseudo-element used to create the sliding hover fill for links */
+/* Used to create the sliding hover fill for links */
 .navbar a::before {
   content: "";
   position: absolute;
@@ -111,24 +107,23 @@ header img {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: #0f0fb0;
+  background: #1a497e;
   transition: all 0.3s ease;
   z-index: -1;
 }
 
-/* Hover state for the sliding background pseudo-element */
+/* Hover state for the sliding background */
 .navbar a:hover::before {
   left: 0;
 }
 
-/* Hover state for the nav link text (contrasts with the fill) */
 .navbar a:hover {
   color: #fff;
 }
 
 /* Large main section with big background image and overlay */
 .main {
-  background: linear-gradient(rgba(102, 102, 222, 0.7), rgba(0,0,128,0.7)), url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d") no-repeat center center/cover;
+  background: linear-gradient(rgba(52, 134, 215, 0.7), rgb(14, 43, 87)), url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d") no-repeat center center/cover;
   color: white;
   text-align: center;
   padding: 80px 20px;
@@ -140,7 +135,7 @@ header img {
   margin-bottom: 20px;
 }
 
-/* Main paragraph sizing and readable line settings */
+
 .main p {
   font-size: 16px;
   max-width: 800px;
@@ -148,7 +143,7 @@ header img {
   line-height: 1.6;
 }
 
-/* Container for the row of feature/icon columns below the hero */
+
 .features {
   display: flex;
   justify-content: center;
@@ -156,16 +151,356 @@ header img {
   margin-top: 55px;
 }
 
-/* Individual feature column (icon + caption) */
+
 .feature {
   max-width: 200px;
   text-align: center;
 }
 
-/* Icon image sizing for the three feature icons */
+
 .icon1 img,
 .icon2 img,
 .icon3 img {
     width: 60px;
     height: 60px;
+}
+
+/* Login and Registration Section */
+body.body-auth * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.body-auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #3d6da6, #132342);
+}
+
+.auth-wrapper {
+  width: 900px;
+  height: 550px;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.auth-info {
+  flex: 1;
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.logo-box {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.logo-box img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+}
+
+.auth-info h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.auth-info p {
+  font-size: 15px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.auth-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 380px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  opacity: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+  text-align: center;
+}
+
+.form-box.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+}
+
+.form-box h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+  color: #333;
+}
+
+.form-box .subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  position: relative;
+  margin: 20px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.input-box input:focus {
+  border-color: #0072ff;
+}
+
+.input-box label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #888;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -8px;
+  font-size: 12px;
+  color: #0072ff;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #0072ff;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #005ecc;
+}
+
+.switch-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.switch-text a {
+  color: #0072ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.switch-text a:hover {
+  color: #005ecc;
+}
+
+.forgot-link {
+  display: block;
+  text-align: right;
+  font-size: 13px;
+  margin: -10px 0 15px;
+  color: #0072ff;
+  text-decoration: none;
+}
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.social-login {
+  margin: 20px 0;
+}
+
+.social-login p {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-buttons button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-buttons .google {
+  background: #db4437;
+}
+.social-buttons .linkedin {
+  background: #0077b5;
+}
+.social-buttons .github {
+  background: #333;
+}
+
+.social-buttons button:hover {
+  opacity: 0.85;
+}
+
+.forgot {
+  margin: 10px 0;
+  text-align: right;
+}
+
+.forgot a {
+  font-size: 13px;
+  color: #0072ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot a:hover {
+  color: #005ecc;
+}
+
+.social-login {
+  margin: 20px 0;
+}
+
+.social-login p {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #555;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.social:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.social.google:hover {
+  background: #db4437;
+}
+.social.linkedin:hover {
+  background: #0077b5;
+}
+.social.github:hover {
+  background: #333;
+}
+
+.social::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -28px;
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.social:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* small Home button used on auth pages */
+.home-wrap {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #0072ff;
+  background: transparent;
+  color: #0072ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+
+.home-btn:hover,
+.home-btn:focus {
+  background: #0072ff;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }

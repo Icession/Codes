@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Opportunity System</title>
+  <link rel="stylesheet" href="IndexPage.css">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body class="body-auth">
+  <div class="auth-wrapper">
+    <!-- Left Panel -->
+    <div class="auth-info">
+      <div class="logo-box">
+        <img src="MainLogo.png" alt="System Logo">
+      </div>
+      <h1>Career Opportunity System</h1>
+      <p>Find your next job, build your future.<br>Start your journey with us today.</p>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="auth-container">
+
+      <!-- Login Form -->
+      <div class="form-box login-box active">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Continue your career search</p>
+        <form>
+          <div class="input-box">
+            <input type="text" required>
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <button type="submit" class="btn">Login</button>
+
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+          <div class="social-login">
+            <p>Or sign in with</p>
+            <div class="social-icons">
+              <a href="#" class="social google" title="Google"><i class="fab fa-google"></i></a>
+              <a href="#" class="social linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social github" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <p class="switch-text">
+            Don’t have an account?
+            <a href="#" id="showRegister">Sign Up</a>
+          </p>
+
+          <!-- Home button: returns user to the site index -->
+          <p class="home-wrap">
+            <a href="IndexPage.html" class="home-btn" title="Go to Home">Home</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- Register Form -->
+      <div class="form-box register-box">
+        <h2>Get Started</h2>
+        <p class="subtitle">Create your account to explore jobs</p>
+        <form>
+          <div class="input-box">
+            <input type="text" required>
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <input type="email" required>
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <button type="submit" class="btn">Register</button>
+
+          <div class="social-login">
+            <p>Or register with</p>
+            <div class="social-icons">
+              <a href="#" class="social google" title="Google"><i class="fab fa-google"></i></a>
+              <a href="#" class="social linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social github" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <p class="switch-text">
+            Already have an account?
+            <a href="#" id="showLogin">Sign In</a>
+          </p>
+
+          <!-- Home button: returns user to the site index -->
+          <p class="home-wrap">
+            <a href="IndexPage.html" class="home-btn" title="Go to Home">Home</a>
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const loginBox = document.querySelector(".login-box");
+      const registerBox = document.querySelector(".register-box");
+      const showRegister = document.getElementById("showRegister");
+      const showLogin = document.getElementById("showLogin");
+
+      function showRegisterForm() {
+        loginBox?.classList.remove("active");
+        registerBox?.classList.add("active");
+        try { history.replaceState(null, '', '#register'); } catch (e) {}
+      }
+
+      function showLoginForm() {
+        registerBox?.classList.remove("active");
+        loginBox?.classList.add("active");
+        try { history.replaceState(null, '', '#login'); } catch (e) {}
+      }
+
+      if (showRegister) {
+        showRegister.addEventListener("click", (e) => {
+          e.preventDefault();
+          showRegisterForm();
+        });
+      }
+
+      if (showLogin) {
+        showLogin.addEventListener("click", (e) => {
+          e.preventDefault();
+          showLoginForm();
+        });
+      }
+
+      const hash = window.location.hash.toLowerCase();
+      const params = new URLSearchParams(window.location.search);
+      if (hash === '#register' || params.get('mode') === 'register') {
+        showRegisterForm();
+      } else {
+        showLoginForm();
+      }
+    });
+  </script>
+</body>
+</html>
